@@ -1,1 +1,16 @@
-[{"nome": "José da Silva"}, {"nome": "Maria de Oliveira"}]
+[
+    {
+        "nome": "José da Silva",
+        "nascimento": "01/01/2017",
+        "email": "teste1@gmail.com"
+    },
+    {
+        "nome": "Maria de Oliveira",
+        "nascimento": "01/02/2017",
+        "email": "teste2@gmail.com"
+    },
+    {
+        "nome": "Pedro",
+        "nascimento": "01/03/2017"
+    }
+]

@@ -4,7 +4,7 @@ class Pessoa():
 
     def __init__(self, nome, nascimento):
         self.nome = nome
-        self.nasciemtno = nascimento
+        self.nascimento = nascimento
 
     def falar(self):
         print("Falando de Pessoa")
