@@ -1,4 +1,5 @@
 from model.Pessoa import Pessoa
+from datetime import date
 
 import json
 
@@ -8,7 +9,7 @@ def main(args=[]):
                 pessoas = []
 
                 # Leitura do Arquivo.
-                f = open("pessoas.txt", encoding="utf8")
+                f = open("pessoas.txt", 'r', encoding="utf8")
 
                 # Parser do JSON em Objeto.
                 jsonObjs = json.loads(f.read())
@@ -16,8 +17,11 @@ def main(args=[]):
                 # Iteração dos elementos do JSON.
                 for jsonObj in jsonObjs:
                     nome = jsonObj["nome"]
-                    nascimento = jsonObj["nascimento"]
-                    pessoa = Pessoa(nome, nascimento)
+                    email = jsonObj["email"]
+                    data = jsonObj["nascimento"].split("-")
+                    nascimento = date(int(data[0]), int(data[1]), int(data[2]))
+                    pessoa = Pessoa(nome, email, nascimento)
+                    print(pessoa)
                     pessoas.append(pessoa)
 
                 pedro = Pessoa("Pedro", "01/03/2017")
@@ -30,6 +34,7 @@ def main(args=[]):
 
                 with open('data.txt', 'w', encoding='utf-8') as f:
                     json.dump(jsonObjs, f, ensure_ascii=False, indent=4)
+                    f.close()
 
                 break
         except FileNotFoundError:
@@ -37,3 +42,4 @@ def main(args=[]):
 
 if __name__ == '__main__':
     main()
+

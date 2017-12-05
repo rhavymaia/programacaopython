@@ -1,12 +1,12 @@
 [
     {
         "nome":"José da Silva",
-        "nascimento":"01/01/2017",
+        "nascimento":"2017-10-30",
         "email": "teste1@gmail.com"
     },
     {
         "nome":"Maria de Oliveira",
-        "nascimento":"01/02/2017",
+        "nascimento":"2017-02-01",
         "email": "teste2@gmail.com"
     }
 ]
