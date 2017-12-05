@@ -1,8 +1,11 @@
-class Animal():
-    def __init__(self, nome, numMembros, habitat):
+from Alimento import Alimento
+
+class Animal(object):
+    def __init__(self, nome, numMembros, habitat, nomeAlimento, pesoAlimento):
         self.nome = nome
         self.numMembros = numMembros
         self.habitat = habitat
+        self.alimento = Alimento(nomeAlimento, pesoAlimento)
 
     def comer(self):
         print(self.nome + " animal come de forma genérica.")

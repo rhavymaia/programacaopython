@@ -3,11 +3,18 @@ from model.Pessoa import Pessoa
 from model.Contato import Contato
 from model.Telefone import Telefone
 
+'''
+    Função para exibir o menu.
+'''
 def exibirMenu():
     print("Agenda Telefônica \n"
           " 1 - Iniciar a Agenda \n"
           " 2 - Criar Contato \n"
           " 6 - Sair")
+
+'''
+    Criação de Pessoa
+'''
 def criarPessoa():
     # Dados do proprietário
     nome = input("Digite seu nome: ")
@@ -32,9 +39,11 @@ def criarAgenda():
     return agenda
 
 def main(args = []):
-    # Variáveis
+
+    # Agenda.
     agenda =  None
 
+    # Exibição do Menu de Opções.
     exibirMenu()
 
     continuar = True
