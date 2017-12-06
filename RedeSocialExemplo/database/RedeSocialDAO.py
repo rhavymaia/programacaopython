@@ -9,10 +9,10 @@ class RedeSocialDAO():
         # Id da Rede Social inserida.
         idRedeSocial = 0
         # Script de Inserção.
-        query = "INSERT INTO redesocial(nome) " \
-                "VALUES(%s)"
+        query = "INSERT INTO redesocial(nome, descricao) " \
+                "VALUES(%s, %s)"
         # Valores.
-        values = (redeSocial.nome)
+        values = (redeSocial.nome, redeSocial.descricao)
 
         try:
             # Conexão com a base de dados.
