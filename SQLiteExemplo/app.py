@@ -1,22 +1,40 @@
-import sqlite3
+'''
+    Função para exibir o menu. Defina números para acessar as opções.
+'''
+def exibirMenu():
+    print("Rede Social \n"
+        " 1 - Definir nome da rede social.\n"
+        " n - Próxima opção.\n"
+        " 0 - Sair")
 
-# Conexão
-conn = sqlite3.connect('rede_social.db')
+def main(args = []):
 
-# definindo um cursor
-cursor = conn.cursor()
+    # Exibição do Menu de Opções.
+    exibirMenu()
 
-# criando a tabela (schema)
-cursor.execute(""" CREATE TABLE usuario (
-        id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-        nome VARCHAR(150) NOT NULL,
-        nascimento DATE,
-        genero VARCHAR(10) NOT NULL,
-        email VARCHAR(100) NOT NULL,
-        senha VARCHAR(15) NOT NULL
-);
-""")
+    continuar = True
 
-print('Tabela criada com sucesso.')
+    while continuar:
+        try:
+            # Continuar a execução do programa.
+            opcao = int(input("Digite a opção: "))
 
-conn.close()
+            if (opcao == 1):
+                pass
+
+            elif (opcao == 'n'):
+                pass
+
+            elif (opcao == 0):
+                continuar = False
+            else:
+                print("Ops! Opção inválida!")
+
+        except ValueError:
+            print("Ops! Digite um valor válido")
+
+if (__name__ == "__main__"):
+    main()
+
+
+

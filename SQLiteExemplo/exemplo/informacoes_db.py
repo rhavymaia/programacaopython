@@ -1,8 +1,8 @@
 import sqlite3
 
-conn = sqlite3.connect('rede_social.db')
+conn = sqlite3.connect('eventos.db')
 cursor = conn.cursor()
-nome_tabela = 'usuario'
+nome_tabela = 'evento'
 
 # obtendo informações da tabela
 cursor.execute('PRAGMA table_info({})'.format(nome_tabela))
