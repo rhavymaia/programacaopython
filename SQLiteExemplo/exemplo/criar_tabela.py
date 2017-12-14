@@ -1,7 +1,10 @@
 import sqlite3
+from database.config import database
 
-# conectando...
-conn = sqlite3.connect('eventos.db')
+# Conexão
+conn = sqlite3.connect(database,
+                               detect_types=sqlite3.PARSE_DECLTYPES
+                                            | sqlite3.PARSE_COLNAMES)
 # definindo um cursor.
 cursor = conn.cursor()
 
@@ -10,8 +13,8 @@ cursor.execute("""
     CREATE TABLE evento (
             id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
             nome TEXT NOT NULL,
-            data_inicio DATETIME NOT NULL,
-            data_fim DATETIME NOT NULL
+            data_inicio TIMESTAMP NOT NULL,
+            data_fim TIMESTAMP NOT NULL
     );
 """)
 
