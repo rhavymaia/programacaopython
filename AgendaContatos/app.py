@@ -70,4 +70,5 @@ def main(args = []):
             print("Ops! Digite um valor válido")
 
 if (__name__ == "__main__"):
+    #comentario de Manel!
     main()
